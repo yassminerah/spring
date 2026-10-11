@@ -4,8 +4,8 @@ import jakarta.persistence.*;
 import lombok.*;
 
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 @Table(name = "client")
@@ -39,5 +39,5 @@ public class Client {
 
     @OneToMany(mappedBy = "client")
     @ToString.Exclude
-    private List<Reservation> reservations = new ArrayList<>();
+    private Set<Reservation> reservations = new HashSet<>();
 }

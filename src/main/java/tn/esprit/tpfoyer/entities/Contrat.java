@@ -5,8 +5,8 @@ import lombok.*;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 @Table(name = "contrat")
@@ -36,5 +36,5 @@ public class Contrat {
 
     @OneToMany(mappedBy = "contrat")
     @ToString.Exclude
-    private List<Paiement> paiements = new ArrayList<>();
+    private Set<Paiement> paiements = new HashSet<>();
 }

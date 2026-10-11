@@ -6,9 +6,7 @@ import tn.esprit.tpfoyer.entities.enums.CategorieVehicule;
 import tn.esprit.tpfoyer.entities.enums.StatutVehicule;
 
 import java.math.BigDecimal;
-import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -50,11 +48,11 @@ public class Vehicule {
 
     @OneToMany(mappedBy = "vehicule")
     @ToString.Exclude
-    private List<Maintenance> maintenances = new ArrayList<>();
+    private Set<Maintenance> maintenances = new HashSet<>();
 
     @OneToMany(mappedBy = "vehicule")
     @ToString.Exclude
-    private List<Reservation> reservations = new ArrayList<>();
+    private Set<Reservation> reservations = new HashSet<>();
 
     @ManyToMany
     @JoinTable(

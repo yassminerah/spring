@@ -3,8 +3,8 @@ package tn.esprit.tpfoyer.entities;
 import jakarta.persistence.*;
 import lombok.*;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 @Table(name = "agence")
@@ -32,9 +32,9 @@ public class Agence {
 
     @OneToMany(mappedBy = "agence")
     @ToString.Exclude
-    private List<Employe> employes = new ArrayList<>();
+    private Set<Employe> employes = new HashSet<>();
 
     @OneToMany(mappedBy = "agence")
     @ToString.Exclude
-    private List<Vehicule> vehicules = new ArrayList<>();
+    private Set<Vehicule> vehicules = new HashSet<>();
 }
