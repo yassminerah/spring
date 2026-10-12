@@ -1,5 +1,6 @@
 package tn.esprit.tpfoyer.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -22,6 +23,7 @@ public class Equipement {
     private String libelle;
 
     @ManyToMany(mappedBy = "equipements")
+    @JsonIgnore
     @ToString.Exclude
     private Set<Vehicule> vehicules = new HashSet<>();
 }

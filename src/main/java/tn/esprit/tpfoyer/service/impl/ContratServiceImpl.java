@@ -6,7 +6,8 @@ import tn.esprit.tpfoyer.entities.Contrat;
 import tn.esprit.tpfoyer.repository.ContratRepository;
 import tn.esprit.tpfoyer.service.interfaces.IContratService;
 
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 
 @Service
 @AllArgsConstructor
@@ -35,7 +36,7 @@ public class ContratServiceImpl implements IContratService {
     }
 
     @Override
-    public List<Contrat> getAllContrats() {
-        return contratRepository.findAll();
+    public Set<Contrat> getAllContrats() {
+        return new HashSet<>(contratRepository.findAll());
     }
 }

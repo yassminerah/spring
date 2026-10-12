@@ -6,7 +6,8 @@ import tn.esprit.tpfoyer.entities.Agence;
 import tn.esprit.tpfoyer.repository.AgenceRepository;
 import tn.esprit.tpfoyer.service.interfaces.IAgenceService;
 
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 
 @Service
 @AllArgsConstructor
@@ -35,7 +36,7 @@ public class AgenceServiceImpl implements IAgenceService {
     }
 
     @Override
-    public List<Agence> getAllAgences() {
-        return agenceRepository.findAll();
+    public Set<Agence> getAllAgences() {
+        return new HashSet<>(agenceRepository.findAll());
     }
 }

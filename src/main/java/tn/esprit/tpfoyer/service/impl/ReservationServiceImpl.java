@@ -6,7 +6,8 @@ import tn.esprit.tpfoyer.entities.Reservation;
 import tn.esprit.tpfoyer.repository.ReservationRepository;
 import tn.esprit.tpfoyer.service.interfaces.IReservationService;
 
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 
 @Service
 @AllArgsConstructor
@@ -35,7 +36,7 @@ public class ReservationServiceImpl implements IReservationService {
     }
 
     @Override
-    public List<Reservation> getAllReservations() {
-        return reservationRepository.findAll();
+    public Set<Reservation> getAllReservations() {
+        return new HashSet<>(reservationRepository.findAll());
     }
 }

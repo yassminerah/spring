@@ -1,5 +1,6 @@
 package tn.esprit.tpfoyer.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 import tn.esprit.tpfoyer.entities.enums.StatutReservation;
@@ -39,6 +40,7 @@ public class Reservation {
     private Client client;
 
     @OneToOne(mappedBy = "reservation")
+    @JsonIgnore
     @ToString.Exclude
     private Contrat contrat;
 }

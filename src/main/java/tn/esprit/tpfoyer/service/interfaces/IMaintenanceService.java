@@ -2,7 +2,7 @@ package tn.esprit.tpfoyer.service.interfaces;
 
 import tn.esprit.tpfoyer.entities.Maintenance;
 
-import java.util.List;
+import java.util.Set;
 
 public interface IMaintenanceService {
     Maintenance addMaintenance(Maintenance maintenance);
@@ -13,5 +13,5 @@ public interface IMaintenanceService {
 
     Maintenance getMaintenanceById(Long id);
 
-    List<Maintenance> getAllMaintenances();
+    Set<Maintenance> getAllMaintenances();
 }

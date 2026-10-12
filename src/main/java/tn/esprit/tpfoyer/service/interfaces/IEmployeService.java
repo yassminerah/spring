@@ -2,7 +2,7 @@ package tn.esprit.tpfoyer.service.interfaces;
 
 import tn.esprit.tpfoyer.entities.Employe;
 
-import java.util.List;
+import java.util.Set;
 
 public interface IEmployeService {
     Employe addEmploye(Employe employe);
@@ -13,5 +13,5 @@ public interface IEmployeService {
 
     Employe getEmployeById(Long id);
 
-    List<Employe> getAllEmployes();
+    Set<Employe> getAllEmployes();
 }

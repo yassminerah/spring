@@ -6,7 +6,8 @@ import tn.esprit.tpfoyer.entities.Paiement;
 import tn.esprit.tpfoyer.repository.PaiementRepository;
 import tn.esprit.tpfoyer.service.interfaces.IPaiementService;
 
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 
 @Service
 @AllArgsConstructor
@@ -35,7 +36,7 @@ public class PaiementServiceImpl implements IPaiementService {
     }
 
     @Override
-    public List<Paiement> getAllPaiements() {
-        return paiementRepository.findAll();
+    public Set<Paiement> getAllPaiements() {
+        return new HashSet<>(paiementRepository.findAll());
     }
 }

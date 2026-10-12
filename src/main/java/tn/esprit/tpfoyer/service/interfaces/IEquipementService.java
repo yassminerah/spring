@@ -2,7 +2,7 @@ package tn.esprit.tpfoyer.service.interfaces;
 
 import tn.esprit.tpfoyer.entities.Equipement;
 
-import java.util.List;
+import java.util.Set;
 
 public interface IEquipementService {
     Equipement addEquipement(Equipement equipement);
@@ -13,5 +13,5 @@ public interface IEquipementService {
 
     Equipement getEquipementById(Long id);
 
-    List<Equipement> getAllEquipements();
+    Set<Equipement> getAllEquipements();
 }

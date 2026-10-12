@@ -2,7 +2,7 @@ package tn.esprit.tpfoyer.service.interfaces;
 
 import tn.esprit.tpfoyer.entities.Reservation;
 
-import java.util.List;
+import java.util.Set;
 
 public interface IReservationService {
     Reservation addReservation(Reservation reservation);
@@ -13,5 +13,5 @@ public interface IReservationService {
 
     Reservation getReservationById(Long id);
 
-    List<Reservation> getAllReservations();
+    Set<Reservation> getAllReservations();
 }

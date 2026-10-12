@@ -2,7 +2,7 @@ package tn.esprit.tpfoyer.service.interfaces;
 
 import tn.esprit.tpfoyer.entities.Paiement;
 
-import java.util.List;
+import java.util.Set;
 
 public interface IPaiementService {
     Paiement addPaiement(Paiement paiement);
@@ -13,5 +13,5 @@ public interface IPaiementService {
 
     Paiement getPaiementById(Long id);
 
-    List<Paiement> getAllPaiements();
+    Set<Paiement> getAllPaiements();
 }

@@ -1,5 +1,6 @@
 package tn.esprit.tpfoyer.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -38,6 +39,7 @@ public class Client {
     private LocalDate dateInscription;
 
     @OneToMany(mappedBy = "client")
+    @JsonIgnore
     @ToString.Exclude
     private Set<Reservation> reservations = new HashSet<>();
 }

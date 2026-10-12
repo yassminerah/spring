@@ -1,5 +1,6 @@
 package tn.esprit.tpfoyer.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 import tn.esprit.tpfoyer.entities.enums.CategorieVehicule;
@@ -47,10 +48,12 @@ public class Vehicule {
     private Agence agence;
 
     @OneToMany(mappedBy = "vehicule")
+    @JsonIgnore
     @ToString.Exclude
     private Set<Maintenance> maintenances = new HashSet<>();
 
     @OneToMany(mappedBy = "vehicule")
+    @JsonIgnore
     @ToString.Exclude
     private Set<Reservation> reservations = new HashSet<>();
 

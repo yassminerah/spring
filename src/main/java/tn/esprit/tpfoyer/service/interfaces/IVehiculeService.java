@@ -2,7 +2,7 @@ package tn.esprit.tpfoyer.service.interfaces;
 
 import tn.esprit.tpfoyer.entities.Vehicule;
 
-import java.util.List;
+import java.util.Set;
 
 public interface IVehiculeService {
     Vehicule addVehicule(Vehicule vehicule);
@@ -13,5 +13,5 @@ public interface IVehiculeService {
 
     Vehicule getVehiculeById(Long id);
 
-    List<Vehicule> getAllVehicules();
+    Set<Vehicule> getAllVehicules();
 }

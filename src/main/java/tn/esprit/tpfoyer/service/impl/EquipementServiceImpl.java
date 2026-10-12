@@ -6,7 +6,8 @@ import tn.esprit.tpfoyer.entities.Equipement;
 import tn.esprit.tpfoyer.repository.EquipementRepository;
 import tn.esprit.tpfoyer.service.interfaces.IEquipementService;
 
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 
 @Service
 @AllArgsConstructor
@@ -35,7 +36,7 @@ public class EquipementServiceImpl implements IEquipementService {
     }
 
     @Override
-    public List<Equipement> getAllEquipements() {
-        return equipementRepository.findAll();
+    public Set<Equipement> getAllEquipements() {
+        return new HashSet<>(equipementRepository.findAll());
     }
 }

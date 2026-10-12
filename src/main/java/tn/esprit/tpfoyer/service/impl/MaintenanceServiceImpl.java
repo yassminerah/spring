@@ -6,7 +6,8 @@ import tn.esprit.tpfoyer.entities.Maintenance;
 import tn.esprit.tpfoyer.repository.MaintenanceRepository;
 import tn.esprit.tpfoyer.service.interfaces.IMaintenanceService;
 
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 
 @Service
 @AllArgsConstructor
@@ -35,7 +36,7 @@ public class MaintenanceServiceImpl implements IMaintenanceService {
     }
 
     @Override
-    public List<Maintenance> getAllMaintenances() {
-        return maintenanceRepository.findAll();
+    public Set<Maintenance> getAllMaintenances() {
+        return new HashSet<>(maintenanceRepository.findAll());
     }
 }

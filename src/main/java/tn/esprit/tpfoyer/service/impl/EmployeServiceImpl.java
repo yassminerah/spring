@@ -6,7 +6,8 @@ import tn.esprit.tpfoyer.entities.Employe;
 import tn.esprit.tpfoyer.repository.EmployeRepository;
 import tn.esprit.tpfoyer.service.interfaces.IEmployeService;
 
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 
 @Service
 @AllArgsConstructor
@@ -35,7 +36,7 @@ public class EmployeServiceImpl implements IEmployeService {
     }
 
     @Override
-    public List<Employe> getAllEmployes() {
-        return employeRepository.findAll();
+    public Set<Employe> getAllEmployes() {
+        return new HashSet<>(employeRepository.findAll());
     }
 }

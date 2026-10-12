@@ -6,7 +6,8 @@ import tn.esprit.tpfoyer.entities.Client;
 import tn.esprit.tpfoyer.repository.ClientRepository;
 import tn.esprit.tpfoyer.service.interfaces.IClientService;
 
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 
 @Service
 @AllArgsConstructor
@@ -35,7 +36,7 @@ public class ClientServiceImpl implements IClientService {
     }
 
     @Override
-    public List<Client> getAllClients() {
-        return clientRepository.findAll();
+    public Set<Client> getAllClients() {
+        return new HashSet<>(clientRepository.findAll());
     }
 }

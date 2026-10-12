@@ -1,5 +1,6 @@
 package tn.esprit.tpfoyer.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -31,10 +32,12 @@ public class Agence {
     private String telephone;
 
     @OneToMany(mappedBy = "agence")
+    @JsonIgnore
     @ToString.Exclude
     private Set<Employe> employes = new HashSet<>();
 
     @OneToMany(mappedBy = "agence")
+    @JsonIgnore
     @ToString.Exclude
     private Set<Vehicule> vehicules = new HashSet<>();
 }

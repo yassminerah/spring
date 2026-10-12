@@ -2,7 +2,7 @@ package tn.esprit.tpfoyer.service.interfaces;
 
 import tn.esprit.tpfoyer.entities.Agence;
 
-import java.util.List;
+import java.util.Set;
 
 public interface IAgenceService {
     Agence addAgence(Agence agence);
@@ -13,5 +13,5 @@ public interface IAgenceService {
 
     Agence getAgenceById(Long id);
 
-    List<Agence> getAllAgences();
+    Set<Agence> getAllAgences();
 }

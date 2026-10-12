@@ -2,7 +2,7 @@ package tn.esprit.tpfoyer.service.interfaces;
 
 import tn.esprit.tpfoyer.entities.Contrat;
 
-import java.util.List;
+import java.util.Set;
 
 public interface IContratService {
     Contrat addContrat(Contrat contrat);
@@ -13,5 +13,5 @@ public interface IContratService {
 
     Contrat getContratById(Long id);
 
-    List<Contrat> getAllContrats();
+    Set<Contrat> getAllContrats();
 }

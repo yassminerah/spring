@@ -1,5 +1,6 @@
 package tn.esprit.tpfoyer.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -35,6 +36,7 @@ public class Contrat {
     private Reservation reservation;
 
     @OneToMany(mappedBy = "contrat")
+    @JsonIgnore
     @ToString.Exclude
     private Set<Paiement> paiements = new HashSet<>();
 }

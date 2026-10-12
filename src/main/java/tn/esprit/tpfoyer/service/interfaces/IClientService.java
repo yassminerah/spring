@@ -2,7 +2,7 @@ package tn.esprit.tpfoyer.service.interfaces;
 
 import tn.esprit.tpfoyer.entities.Client;
 
-import java.util.List;
+import java.util.Set;
 
 public interface IClientService {
     Client addClient(Client client);
@@ -13,5 +13,5 @@ public interface IClientService {
 
     Client getClientById(Long id);
 
-    List<Client> getAllClients();
+    Set<Client> getAllClients();
 }

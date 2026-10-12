@@ -6,7 +6,8 @@ import tn.esprit.tpfoyer.entities.Vehicule;
 import tn.esprit.tpfoyer.repository.VehiculeRepository;
 import tn.esprit.tpfoyer.service.interfaces.IVehiculeService;
 
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 
 @Service
 @AllArgsConstructor
@@ -35,7 +36,7 @@ public class VehiculeServiceImpl implements IVehiculeService {
     }
 
     @Override
-    public List<Vehicule> getAllVehicules() {
-        return vehiculeRepository.findAll();
+    public Set<Vehicule> getAllVehicules() {
+        return new HashSet<>(vehiculeRepository.findAll());
     }
 }
